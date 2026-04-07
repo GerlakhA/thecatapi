@@ -1,0 +1,148 @@
+.card {
+	position: relative;
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+	width: 225px;
+	height: 225px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1;
+	background: transparent;
+	transition:
+		background 0.5s ease,
+		transform 0.5s ease,
+		width 0.5s ease,
+		height 0.5s ease;
+
+	@media (max-width: 1024px) {
+		width: 200px;
+		height: 200px;
+	}
+
+	@media (max-width: 768px) {
+		width: 180px;
+		height: 180px;
+	}
+
+	@media (max-width: 480px) {
+		width: 140px;
+		height: 140px;
+	}
+
+	@media (max-width: 380px) {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+.card:hover {
+	background: white;
+	width: 257px;
+	height: 256px;
+	transform: scale(1.05);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+	@media (max-width: 1024px) {
+		width: 230px;
+		height: 229px;
+	}
+
+	@media (max-width: 768px) {
+		width: 205px;
+		height: 204px;
+	}
+
+	@media (max-width: 480px) {
+		width: 160px;
+		height: 159px;
+	}
+
+	@media (max-width: 380px) {
+		width: 140px;
+		height: 139px;
+	}
+}
+
+.image {
+	width: 225px;
+	height: 225px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 1024px) {
+		width: 200px;
+		height: 200px;
+	}
+
+	@media (max-width: 768px) {
+		width: 180px;
+		height: 180px;
+	}
+
+	@media (max-width: 480px) {
+		width: 140px;
+		height: 140px;
+	}
+
+	@media (max-width: 380px) {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+.favoriteButton {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 48px;
+	height: 48px;
+	border: none;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	opacity: 0;
+
+	.card:hover & {
+		opacity: 1;
+	}
+
+	img {
+		width: 48px;
+		height: 48px;
+		bottom: 24px;
+		right: 24px;
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+
+		@media (max-width: 768px) {
+			bottom: 12px;
+			right: 12px;
+			width: 36px;
+			height: 36px;
+
+			img {
+				width: 36px;
+				height: 36px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			bottom: 8px;
+			right: 8px;
+			width: 28px;
+			height: 28px;
+
+			img {
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+}
