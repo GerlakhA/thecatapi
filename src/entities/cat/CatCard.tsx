@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/shared/config/constants'
 import { useCatStore } from '@/shared/store/catStore'
 import { type Cat } from '@/shared/types'
 import styles from './CatCard.module.scss'
@@ -28,9 +29,14 @@ export const CatCard = ({ cat }: CatCardProps) => {
 				className={`${styles.favoriteButton} ${favorite ? styles.active : ''}`}
 			>
 				{favorite ? (
-					<img src={'/favorite_full.png'} alt='favorite-full' width={48} height={48} />
+					<img
+						src={`${BASE_URL}favorite_full.png`}
+						alt='favorite-full'
+						width={48}
+						height={48}
+					/>
 				) : (
-					<img src={'/favorite.png'} alt='favorite' width={48} height={48} />
+					<img src={`${BASE_URL}favorite.png`} alt='favorite' width={48} height={48} />
 				)}
 			</button>
 		</div>
