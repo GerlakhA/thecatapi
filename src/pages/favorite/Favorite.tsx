@@ -9,8 +9,8 @@ export const Favorite = () => {
 		<main className={styles.favorite}>
 			{favorites.length === 0 ? (
 				<div className={styles.empty}>
-					<p>У вас пока нет избранных котиков</p>
-					<p className={styles.hint}>Добавьте котика в избранное, нажав на карточку</p>
+					<p>У вас пока нет любимых котиков</p>
+					<p className={styles.hint}>Добавьте котика в любимые, нажав на карточку</p>
 				</div>
 			) : (
 				<div className={styles.grid}>
